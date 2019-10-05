@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/zhuozhe-quick-search/static/css/main.14ee25a3.chunk.css",
+    "main.js": "/zhuozhe-quick-search/static/js/main.3dbd9ad3.chunk.js",
+    "main.js.map": "/zhuozhe-quick-search/static/js/main.3dbd9ad3.chunk.js.map",
+    "runtime-main.js": "/zhuozhe-quick-search/static/js/runtime-main.9cd7e9b1.js",
+    "runtime-main.js.map": "/zhuozhe-quick-search/static/js/runtime-main.9cd7e9b1.js.map",
+    "static/js/2.baf3b1b5.chunk.js": "/zhuozhe-quick-search/static/js/2.baf3b1b5.chunk.js",
+    "static/js/2.baf3b1b5.chunk.js.map": "/zhuozhe-quick-search/static/js/2.baf3b1b5.chunk.js.map",
+    "index.html": "/zhuozhe-quick-search/index.html",
+    "precache-manifest.9ce3e2f15c717e9fb337d588bda33d35.js": "/zhuozhe-quick-search/precache-manifest.9ce3e2f15c717e9fb337d588bda33d35.js",
+    "service-worker.js": "/zhuozhe-quick-search/service-worker.js",
+    "static/css/main.14ee25a3.chunk.css.map": "/zhuozhe-quick-search/static/css/main.14ee25a3.chunk.css.map",
+    "static/media/Pusheen1.png": "/zhuozhe-quick-search/static/media/Pusheen1.718029c6.png",
+    "static/media/Pusheen2.png": "/zhuozhe-quick-search/static/media/Pusheen2.f460a078.png",
+    "static/media/Pusheen3.png": "/zhuozhe-quick-search/static/media/Pusheen3.1f9a08df.png",
+    "static/media/五月天.jpg": "/zhuozhe-quick-search/static/media/五月天.1f018c7e.jpg",
+    "static/media/周杰倫.jpg": "/zhuozhe-quick-search/static/media/周杰倫.159d6810.jpg",
+    "static/media/張信哲.jpg": "/zhuozhe-quick-search/static/media/張信哲.e65a45c0.jpg",
+    "static/media/張學友.jpg": "/zhuozhe-quick-search/static/media/張學友.8db2ea58.jpg",
+    "static/media/張惠妹.jpg": "/zhuozhe-quick-search/static/media/張惠妹.cabe9fec.jpg",
+    "static/media/林俊傑.jpg": "/zhuozhe-quick-search/static/media/林俊傑.fa9f0863.jpg",
+    "static/media/林志炫.jpg": "/zhuozhe-quick-search/static/media/林志炫.0503685f.jpg",
+    "static/media/林憶蓮.jpg": "/zhuozhe-quick-search/static/media/林憶蓮.93158cfb.jpg",
+    "static/media/梁靜茹.jpg": "/zhuozhe-quick-search/static/media/梁靜茹.3caefc09.jpg",
+    "static/media/江蕙.jpg": "/zhuozhe-quick-search/static/media/江蕙.221857b5.jpg",
+    "static/media/王力宏.jpg": "/zhuozhe-quick-search/static/media/王力宏.408fad54.jpg",
+    "static/media/王菲.jpg": "/zhuozhe-quick-search/static/media/王菲.5b8819fe.jpg",
+    "static/media/莫文蔚.jpg": "/zhuozhe-quick-search/static/media/莫文蔚.8e30ab76.jpg",
+    "static/media/蔡依林.jpg": "/zhuozhe-quick-search/static/media/蔡依林.057dbde2.jpg",
+    "static/media/許茹芸.jpg": "/zhuozhe-quick-search/static/media/許茹芸.e55e71c7.jpg",
+    "static/media/辛曉琪.jpg": "/zhuozhe-quick-search/static/media/辛曉琪.239aadd1.jpg",
+    "static/media/陳昇.jpg": "/zhuozhe-quick-search/static/media/陳昇.9072040d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9cd7e9b1.js",
+    "static/js/2.baf3b1b5.chunk.js",
+    "static/css/main.14ee25a3.chunk.css",
+    "static/js/main.3dbd9ad3.chunk.js"
+  ]
+}
