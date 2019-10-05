@@ -4,7 +4,7 @@
 
 [Demo](https://shinenic.github.io/zhuozhe-quick-search/)
 
-![demo1](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo1.gif) ![demo2](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo2.gif)
+![demo1](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo1.gif =250x) ![demo2](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo2.gif =250x)
 
 
 
