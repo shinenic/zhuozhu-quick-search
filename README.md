@@ -2,7 +2,11 @@
 
 快速搜尋卓著之所有歌曲相關資訊
 
-Demo(放連結)
+[Demo](https://shinenic.github.io/zhuozhe-quick-search/)
+
+![demo1](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo1.gif)
+
+![demo2](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo2.gif)
 
 
 
