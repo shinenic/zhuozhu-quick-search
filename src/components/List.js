@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { connect } from 'react-redux';
 import { search, addHistory, setTopCard } from '../actions';
 import { Redirect } from 'react-router-dom';
+import PIC from '../image/artist/周杰倫.jpg';
 
 const getImgSrc = name => {
   return require(`../image/artist/${name}.jpg`);
@@ -13,25 +14,35 @@ const getRandomArbitrary = (min, max) => {
 
 // for desktop
 const GridDiv = styled.div`
-  float: left;
+  display: inline-block;
   width: 25%;
   color: white;
   box-sizing: border-box;
-  border: 1px solid white;
   cursor: pointer;
   position: relative;
   &:before {
     content: "";
 	  float: left;
-	  padding-top: 100%; 	/* initial ratio of 1:1*/
+	  padding-top: 100%; 
   }
+`;
+const ImgContainer = styled.div`
+  width:75%;
+  height:75%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateY(-50%) translateX(-50%);
+  
+  background-image: url(${props=>props.img});
+  background-size: cover;  
+  filter: grayscale(1);
 `;
 
 // for mobile
 const CellDiv = styled.div`
   box-sizing:border-box;
   border:5px solid black;
-  /* color:white; */
   margin:0;
   padding:0;
   float:left;
@@ -54,14 +65,19 @@ const ImgMask = styled.div`
   position:absolute;
   top:0;
   left:0;
-  background:#000;
-  opacity:1;
+  /* background:#000; */
+  /* opacity:1; */
   box-sizing:border-box;
   width:100%;
   height:100%;
   z-index:5;
-  /* animation: ${showImg} 1s 1 both 2000s; */
-  animation: ${showImg} 1s 1 both ${props => props.random}s;
+  
+  background:#013B63;
+  opacity:0.33;
+
+  @media (max-width: 500px) {
+    animation: ${showImg} 1s 1 both ${props => props.random}s;
+  }
 `;
 const TextDiv = styled.div`
   user-select: none;
@@ -122,7 +138,12 @@ class List extends PureComponent {
         {artistArr.map((value, index) => {
           return (
             this.props.windowWidth < 500
-              ? <CellDiv key={index}>
+              ? <CellDiv
+                key={index} onClick={() => {
+                  this.props.search(value);
+                  this.props.addHistory(value);
+                  this.props.setTopCard('listDisplay', false);
+                }}>
                 <ImgMask random={getRandomArbitrary(0, 1.5)} />
                 <TextDiv onClick={() => {
                   this.props.search(value);
@@ -132,10 +153,17 @@ class List extends PureComponent {
                 <div>
                   <Img src={getImgSrc(value)} alt={value} />
                 </div>
-                {/* {value+index} */}
               </CellDiv>
-              : <GridDiv key={index}>
-                <Img src={getImgSrc(value)} alt={value} />
+              : <GridDiv
+                key={index} onClick={() => {
+                  this.props.search(value);
+                  this.props.addHistory(value);
+                  this.props.setTopCard('listDisplay', false);
+                }}>
+                <ImgContainer img={getImgSrc(value)}>
+                  {/* <ImgMask random={getRandomArbitrary(0, 1.5)} /> */}
+                  <TextDiv>{value}</TextDiv>
+                </ImgContainer>
               </GridDiv>
           )
         })
