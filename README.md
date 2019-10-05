@@ -37,7 +37,7 @@
 
 #### 關於
 
-> 如資料有誤或任何建議請不吝指教 [聯絡我](galadiya41@gmail.com)
+> 如資料有誤或任何建議請不吝指教 [聯絡我](mailto: galadiya41@gmail.com)
 
 > 所有資料來源: [卓著音樂資訊網](http://www.musicbook.com.tw/searchSong/index.asp)
 
