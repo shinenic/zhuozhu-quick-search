@@ -4,8 +4,8 @@
 
 [Demo](https://shinenic.github.io/zhuozhe-quick-search/)
 
-![demo1](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo1.gif =250x) ![demo2](https://github.com/shinenic/zhuozhe-quick-search/blob/master/demo2.gif =250x)
 
+<img src="demo1.gif" alt="demo1" width="220"/> <img src="demo2.gif" alt="demo1" width="220"/>
 
 
 
