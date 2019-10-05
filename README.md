@@ -6,6 +6,8 @@ Demo(放連結)
 
 
 
+
+
 ## 功能
 
 * 搜尋
@@ -18,6 +20,8 @@ Demo(放連結)
 
 
 
+
+
 ## 使用技術
 
 * 長列表效能優化
@@ -27,11 +31,21 @@ Demo(放連結)
 
 
 
----
+
+
+#### 關於
 
 > 如資料有誤或任何建議請不吝指教 [聯絡我](mailto: galadiya41@gmail.com)
 
 > 所有資料來源: [卓著音樂資訊網](http://www.musicbook.com.tw/searchSong/index.asp)
+
+
+
+
+
+
+
+
 
 
 
