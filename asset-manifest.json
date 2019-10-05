@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/zhuozhe-quick-search/static/css/main.14ee25a3.chunk.css",
-    "main.js": "/zhuozhe-quick-search/static/js/main.3dbd9ad3.chunk.js",
-    "main.js.map": "/zhuozhe-quick-search/static/js/main.3dbd9ad3.chunk.js.map",
+    "main.css": "/zhuozhe-quick-search/static/css/main.ee80400b.chunk.css",
+    "main.js": "/zhuozhe-quick-search/static/js/main.307f0833.chunk.js",
+    "main.js.map": "/zhuozhe-quick-search/static/js/main.307f0833.chunk.js.map",
     "runtime-main.js": "/zhuozhe-quick-search/static/js/runtime-main.9cd7e9b1.js",
     "runtime-main.js.map": "/zhuozhe-quick-search/static/js/runtime-main.9cd7e9b1.js.map",
-    "static/js/2.baf3b1b5.chunk.js": "/zhuozhe-quick-search/static/js/2.baf3b1b5.chunk.js",
-    "static/js/2.baf3b1b5.chunk.js.map": "/zhuozhe-quick-search/static/js/2.baf3b1b5.chunk.js.map",
+    "static/js/2.b47b285f.chunk.js": "/zhuozhe-quick-search/static/js/2.b47b285f.chunk.js",
+    "static/js/2.b47b285f.chunk.js.map": "/zhuozhe-quick-search/static/js/2.b47b285f.chunk.js.map",
     "index.html": "/zhuozhe-quick-search/index.html",
-    "precache-manifest.9ce3e2f15c717e9fb337d588bda33d35.js": "/zhuozhe-quick-search/precache-manifest.9ce3e2f15c717e9fb337d588bda33d35.js",
+    "precache-manifest.fa7def229fea65955f1c51e93335f46f.js": "/zhuozhe-quick-search/precache-manifest.fa7def229fea65955f1c51e93335f46f.js",
     "service-worker.js": "/zhuozhe-quick-search/service-worker.js",
-    "static/css/main.14ee25a3.chunk.css.map": "/zhuozhe-quick-search/static/css/main.14ee25a3.chunk.css.map",
-    "static/media/Pusheen1.png": "/zhuozhe-quick-search/static/media/Pusheen1.718029c6.png",
+    "static/css/main.ee80400b.chunk.css.map": "/zhuozhe-quick-search/static/css/main.ee80400b.chunk.css.map",
+    "static/media/Pusheen1.png": "/zhuozhe-quick-search/static/media/Pusheen1.1f9a08df.png",
     "static/media/Pusheen2.png": "/zhuozhe-quick-search/static/media/Pusheen2.f460a078.png",
-    "static/media/Pusheen3.png": "/zhuozhe-quick-search/static/media/Pusheen3.1f9a08df.png",
+    "static/media/Pusheen3.png": "/zhuozhe-quick-search/static/media/Pusheen3.718029c6.png",
     "static/media/五月天.jpg": "/zhuozhe-quick-search/static/media/五月天.1f018c7e.jpg",
     "static/media/周杰倫.jpg": "/zhuozhe-quick-search/static/media/周杰倫.159d6810.jpg",
     "static/media/張信哲.jpg": "/zhuozhe-quick-search/static/media/張信哲.e65a45c0.jpg",
@@ -34,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9cd7e9b1.js",
-    "static/js/2.baf3b1b5.chunk.js",
-    "static/css/main.14ee25a3.chunk.css",
-    "static/js/main.3dbd9ad3.chunk.js"
+    "static/js/2.b47b285f.chunk.js",
+    "static/css/main.ee80400b.chunk.css",
+    "static/js/main.307f0833.chunk.js"
   ]
 }
