@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom';
 const CellDiv = styled.div`
   box-sizing:border-box;
   border:5px solid black;
+  /* color:white; */
   margin:0;
   float:left;
   width:33.33vw;
@@ -68,6 +69,7 @@ const Img = styled.img`
   filter:grayscale(1);
 `;
 const ListDiv = styled.div`
+  box-sizing:border-box;
   background:black;
   position:absolute;
   left:0;
@@ -76,8 +78,8 @@ const ListDiv = styled.div`
   margin:0;
   width:100vw;
   ${CellDiv}:nth-child(4),${CellDiv}:nth-child(8),${CellDiv}:nth-child(13){
-    width:66.66vw;
-    height:66.66vw;
+    width:66.6vw;
+    height:66.6vw;
     ${TextDiv}{
         width:calc(66.66vw - 10px);
         height:calc(66.66vw - 10px);
@@ -105,7 +107,9 @@ const getRandomArbitrary = (min, max) => {
 
 class List extends PureComponent {
     render() {
-        const artistArr = ['蔡依林', '莫文蔚', '王力宏', '張學友', '張信哲', '林憶蓮', '五月天', '張惠妹', '辛曉琪', '周杰倫', '林志炫', '林俊傑', '江蕙', '梁靜茹', '許美靜', '許茹芸', '陳昇', '王菲']
+        const artistArr = ['蔡依林', '莫文蔚', '王力宏', '張學友', '張信哲', '林憶蓮'
+        , '五月天', '張惠妹', '辛曉琪', '周杰倫', '林志炫', '林俊傑', '江蕙', '梁靜茹'
+        , '許美靜', '許茹芸', '陳昇', '王菲']
         return (
             <ListDiv>
                 {artistArr.map((value, index) => {
@@ -119,9 +123,11 @@ class List extends PureComponent {
                                 this.props.setTopCard('listDisplay', false);
                             }}>{value}</TextDiv>
                             <Img src={getImgSrc(value)} alt={value} />
+                            {/* {value+index} */}
                         </CellDiv>
                     )
-                })}
+                })
+                }
                 {(this.props.text!==''||this.props.listDisplay===false) && <Redirect to={'/search'} />}
             </ListDiv>
         )
