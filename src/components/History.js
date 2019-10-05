@@ -26,14 +26,18 @@ const HistoryDiv = styled.div`
   width:100vw;
   overflow:hidden;
   white-space: pre-line;
+  @media (min-width: 500px) {
+    left:250px;
+    width:calc(100vw - 250px);
+  }
 `;
 const DateDiv = styled.div`
-  width:70vw;
+  width:70%;
   display: inline-block;
   text-align:center;
 `;
 const ContentDiv = styled(DateDiv)`
-  width:30vw;
+  width:30%;
   text-align:left;
 `;
 const CellDiv = styled.div`
@@ -41,7 +45,7 @@ const CellDiv = styled.div`
   animation:${showText} 0.4s 1 both ${props => props.delay}s;
 `;
 const CenterDiv = styled(DateDiv)`
-  width:100vw;
+  width:100%;
   animation:${showText} 0.7s 1 both;
 `;
 const Option = styled.div`

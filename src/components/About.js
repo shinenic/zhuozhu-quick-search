@@ -11,12 +11,26 @@ const AboutDiv = styled.div`
   width:100vw;
   overflow:hidden;
   white-space: pre-line;
+  
+  @media (min-width: 500px) {
+    left:250px;
+    width:calc(100vw - 250px);
+  }
 `;
 const ImgDiv = styled.div`
   float:left;
   margin-left:6vw;
-  height:30vw;
-  width:30vw;
+  /* height:30vw;
+  width:30vw; */
+  width:30%;
+  &:before {
+    content: "";
+	  float: left;
+	  padding-top: 100%; 	/* initial ratio of 1:1*/
+  }
+  @media (min-width: 500px) {
+    width:14%;
+  }
     img{
         content:url(${Pusheen});
         width:auto;
@@ -30,8 +44,12 @@ const IntroduceDiv = styled.div`
   padding-left:5vw;
   margin-top:-4vw;
   float:left;
-  height:33vw;
-  width:63vw;
+  width:63%;
+  &:before {
+    content: "";
+	  float: left;
+	  padding-top: 200%; 	/* initial ratio of 1:1*/
+  }
   line-height:7vw;
   display: table;
   font-size:15px;
@@ -40,16 +58,24 @@ const IntroduceDiv = styled.div`
     display: table-cell;
     vertical-align: middle;
   }
+  @media (min-width: 500px) {
+    line-height:45px;
+    margin-top:0;
+  }
 `;
 
 const Title = styled.div`
   padding-left:2.5vw;
   float:left;
-  width:100vw;
+  width:100%;
   color:white;
   font-size:23px;
   font-weight:bold;
-  margin:70px 0 30px 0;  
+  margin:70px 0 30px 0; 
+  
+  @media (min-width: 500px) {
+    padding-left:50px;
+  }
 `;
 const Title2 = styled(Title)`
   margin:70px 0 0 0;  
@@ -85,6 +111,13 @@ const Bottom = styled.div`
     font-size:13px;
     text-align:center;
     background:#444;
+
+    @media (min-width: 500px) {
+      width:100%;
+      height:50px;
+      line-height:50px;
+      margin:100px 0 0 0;
+  }
 `;
 
 

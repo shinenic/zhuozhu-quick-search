@@ -20,12 +20,17 @@ const DownloadDiv = styled.div`
   top:0;
   padding-top:110px;
   width:100vw;
+
+  @media (min-width: 500px) {
+    left:250px;
+    width:calc(100vw - 250px);
+  }
 `;
 
 const DivLeft = styled.div`
   opacity:0;
   float:left;
-  width:40vw;
+  width:40%;
   text-align:right;
   font-size:16px;
   line-height:40px;
@@ -34,12 +39,12 @@ const DivLeft = styled.div`
 `;
 const DivRight = styled(DivLeft)`
   color:#9DD7FF;
-  width:50vw;
+  width:50%;
   text-align:center;
   animation:${showText} 1s 1 both 0.7s;
 `;
 const DivTop = styled(DivRight)`
-  width:100vw;
+  width:100%;
   text-align:center;
   font-size:20px;
   line-height:80px;

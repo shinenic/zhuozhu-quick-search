@@ -55,7 +55,7 @@ const TitleImg = styled.img`
   top:50%;
   left:50%;
   transform: translateY(-50%) translateX(-50%);
-  cursor: pointer; 
+  /* cursor: pointer;  */
 `;
 
 const OldiesText = styled.span`
@@ -104,7 +104,11 @@ class Menu extends PureComponent {
   render() {
     return (
       <MenuDiv height={this.props.windowHeight} menuState={this.props.menuState} >
-        <Title><TitleImg onClick={() => this.props.changePic()} pic={this.props.titlePic % 3 + 1} /></Title>
+        <Title>
+          <TitleImg 
+          // onClick={() => this.props.changePic()} 
+          pic={this.props.titlePic % 3 + 1} />
+        </Title>
         <StyledLink to={'/list'} onClick={() => { this.props.setTopCard('listDisplay', true); this.props.setTopCardDefault(); }}>
           <Option><OptionText>常見歌手名單</OptionText></Option>
         </StyledLink>

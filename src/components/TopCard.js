@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setTopCard, handleInput, search, addHistory } from '../actions';
+// import { Redirect } from 'react-router-dom';
 import { Title, SearchImg, TextInput, TopCardDiv, CrossImg, MenuImg, StyledLink } from '../styles/TopCardStyled';
 
 class TopCard extends Component {
@@ -15,6 +16,12 @@ class TopCard extends Component {
     this.props.handleInput('');
     setTimeout(() => this.inputRef.focus(), 10);
   }
+  // handleKeyDown = e => {
+  //   if(e.keyCode===8 && this.props.text.length===1){
+  //     <Redirect to={'/'} />
+  //   }
+  // }
+
   render() {
     return (
       <TopCardDiv
@@ -27,6 +34,7 @@ class TopCard extends Component {
         <TextInput type="text"
           onBlur={e => this.props.addHistory(e.target.value)}
           value={this.props.text}
+          // onKeyDown={e => this.handleKeyDown(e)}
           switch={this.props.textboxState}
           onChange={e => {
             this.props.handleInput(e.target.value);

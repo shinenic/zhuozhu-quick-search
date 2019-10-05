@@ -12,6 +12,9 @@ const ResultCardDiv = styled.div`
   padding:0;
   overflow:hidden;
   white-space: pre-line;
+  @media (min-width: 500px) {
+    left:250px;
+  }
 `;
 const gridStyle = {
     outline: 'none',
@@ -43,16 +46,13 @@ class ResultCard extends PureComponent {
     render() {
         const list = this.props.searchResult;
         return (
-            <ResultCardDiv
-                topCardHeight={this.props.topCardHeight}
-                Height={this.props.windowHeight}
-                Width={this.props.windowWidth}>
+            <ResultCardDiv>
                 <Grid
                     cellRenderer={this._cellRenderer}
                     columnCount={list.length !== 0 ? list[0].length : 0}
                     columnWidth={this._getColumnWidth}
                     height={this.props.windowHeight}
-                    width={this.props.windowWidth}
+                    width={this.props.windowWidth<500?this.props.windowWidth:this.props.windowWidth-250}
                     rowCount={list.length + 1}
                     rowHeight={this._getRowHeight}
                     style={gridStyle}
@@ -140,7 +140,7 @@ class ResultCard extends PureComponent {
         }
     }
     _getColumnWidth({ index }) {
-        const width = this.props.windowWidth;
+        const width = this.props.windowWidth<500?this.props.windowWidth:this.props.windowWidth-250;
         switch (index) {
             case 0:
                 return width * 0.49;

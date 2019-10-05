@@ -40,6 +40,10 @@ const LoadingText = styled.div`
     content: "Loading";
     font-size: 40px;
   }
+  @media (min-width: 500px) {
+    top:40vh;
+    left:50vw;
+  }
 `;
 
 class Loading extends PureComponent {

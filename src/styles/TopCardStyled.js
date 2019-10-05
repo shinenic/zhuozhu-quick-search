@@ -26,6 +26,10 @@ export const Title = styled.span`
   color:white;
   font-weight:bold;
   margin-left:47px;
+  
+  @media (min-width: 500px) {
+    margin-left:20px;
+  }
 `;
 
 export const Hamburger = styled.button`
@@ -45,6 +49,10 @@ export const MenuImg = styled.img`
   transform: translateY(-50%);
   cursor: pointer; 
   z-index:12;
+  
+  @media (min-width: 500px) {
+    display:none;
+  }
 `;
 
 const SearchInit = keyframes`
@@ -143,4 +151,9 @@ export const TopCardDiv = styled.div`
   animation-duration:0.7s;
   animation-direction:${props => props.topCardState === 'MIN' ? 'normal' : 'reverse'} ;
   animation-fill-mode:both;
+  
+  @media (min-width: 500px) {
+    left:250px;
+    width:calc(100vw - 250px);
+  }
 `;
