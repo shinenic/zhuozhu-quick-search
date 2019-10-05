@@ -26,6 +26,7 @@
 
 ## 使用技術
 
+* React
 * 長列表效能優化
 * Redux
 * MiddleWare

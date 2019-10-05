@@ -161,7 +161,6 @@ class List extends PureComponent {
                   this.props.setTopCard('listDisplay', false);
                 }}>
                 <ImgContainer img={getImgSrc(value)}>
-                  {/* <ImgMask random={getRandomArbitrary(0, 1.5)} /> */}
                   <TextDiv>{value}</TextDiv>
                 </ImgContainer>
               </GridDiv>
