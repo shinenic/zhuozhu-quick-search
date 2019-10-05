@@ -15,7 +15,7 @@ import { setTopCard, updateWindowSize } from '../actions';
 import { Route } from 'react-router-dom'
 
 const MainDiv = styled.div`
-  @media (min-width: 600px) {
+  @media (min-width: 500px) {
     /* display:none; */
   }
 `;

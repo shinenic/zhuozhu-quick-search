@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { connect } from 'react-redux';
 import { zhSwitchChange, engSwitchChange, setTopCardDefault, fetchDataFromServer, changePic, setTopCard } from '../actions';
 import Switch from "react-switch";
@@ -8,35 +8,20 @@ import Pusheen1 from '../image/Pusheen1.png';
 import Pusheen2 from '../image/Pusheen2.png';
 import Pusheen3 from '../image/Pusheen3.png';
 
-const leftin = keyframes`
-  from{
-    left:-45vw;
-    }
-  to{
-    left:0;
-  }
-`;
-const leftout = keyframes`
-  from{
-    left:0;
-    }
-  to{
-    left:-45vw;
-  }
-`;
 const MenuDiv = styled.div`
   height:${props => props.height + 'px'};
   width:45vw;
   position:fixed;
   top:0;
-  left:-45vw;
+  transition:0.7s;
+  left:${props => props.menuState === 'OPEN' ? '0' : '-45vw'};
   background:#154970;
   opacity:1;
-  animation: 
-    ${props => props.menuState === 'OPEN' && leftin} 
-    ${props => props.menuState === 'CLOSE' && leftout} 
-    0.7s  1 both;
   z-index:12;
+  @media (min-width: 500px) {
+    width:250px;
+    left:0;
+  }
 `;
 const Option = styled.div`
   height:60px;
@@ -46,9 +31,16 @@ const Option = styled.div`
   text-align:left;
   color:#EEE;
   font-weight:bold;
+
+  @media (min-width: 500px) {
+    width:250px;
+  }
 `;
 const OptionText = styled.span`
   padding-left:18px;
+  @media (min-width: 500px) {
+    padding-left:30px;
+  }
 `;
 const Title = styled(Option)`
   height:150px;
@@ -73,11 +65,19 @@ const OldiesText = styled.span`
   position:absolute;
   bottom:4vh;
   left:15px;
+  
+  @media (min-width: 500px) {
+    left:30px;
+  }
 `;
 const OldiesSwitchDiv = styled.div`
   position:absolute;
   bottom:calc(4vh - 4px);
   right:8px;
+  
+  @media (min-width: 500px) {
+    right:30px;
+  }
 `;
 const EngOldiesText = styled(OldiesText)`
   bottom:12vh;
