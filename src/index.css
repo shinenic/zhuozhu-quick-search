@@ -10,7 +10,7 @@ body {
   background: black;
   
 }
-
+@media (min-width: 500px) {
   /* width */
   ::-webkit-scrollbar {
     width: 10px;
@@ -30,4 +30,4 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
-
+}
