@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setTopCard, handleInput, search, addHistory, setTopCardDefault } from '../actions';
-import { Title, SearchImg, TextInput, TopCardDiv, CrossImg, MenuImg, StyledLink } from '../styles/TopCardStyled';
+import { Title, SearchImg, TextInput, TopCardDiv, MenuImg, StyledLink } from '../styles/TopCardStyled';
 
 class TopCard extends Component {
   switchIcon() {
     if (this.props.textboxState === "CLOSE") {
       this.props.setTopCard('textboxState', 'OPEN');
+      this.props.setTopCard('listDisplay', false);
+      setTimeout(() => this.inputRef.focus(), 100);
+    } else {
+      this.inputRef.focus();
     }
     this.props.handleInput('');
-    setTimeout(() => this.inputRef.focus(), 500);
   }
 
   render() {
@@ -40,9 +43,16 @@ class TopCard extends Component {
           onFocus={() => { (this.props.topCardState === "MIN") && this.props.setTopCard('topCardState', 'MAX') }}
           ref={(ip) => this.inputRef = ip} />
 
-        <StyledLink to={'/search'}>
+        <StyledLink to={this.props.text === '' && this.props.textboxState ==='OPEN' ? '/' : '/search'}>
           <SearchImg
-            onClick={() => { this.switchIcon(); this.props.setTopCard('listDisplay', false) }}
+            onClick={() => {
+              if (this.props.text !== '' || this.props.textboxState ==='CLOSE') {
+                this.switchIcon();
+              } else {
+                this.props.setTopCard('listDisplay', true)
+                this.props.setTopCardDefault()
+              }
+            }}
             textboxState={this.props.textboxState} />
         </StyledLink>
 

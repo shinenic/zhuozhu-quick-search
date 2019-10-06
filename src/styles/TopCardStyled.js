@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import searchIcon from '../image/search_white.png';
 import crossIcon from '../image/cross_white.png';
 import menuIcon from '../image/menu_white.png';
