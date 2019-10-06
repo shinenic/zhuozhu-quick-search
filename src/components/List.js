@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components';
 import { connect } from 'react-redux';
-import { search, addHistory, setTopCard } from '../actions';
+import { search, addHistory, setTopCard, handleInput } from '../actions';
 import { Redirect } from 'react-router-dom';
 
 const getImgSrc = name => {
@@ -152,13 +152,11 @@ class List extends PureComponent {
                   this.props.search(value);
                   this.props.addHistory(value);
                   this.props.setTopCard('listDisplay', false);
+                  this.props.handleInput(value);
+                  this.props.setTopCard('textboxState', 'OPEN');
                 }}>
                 <ImgMask random={getRandomArbitrary(0, 1.5)} />
-                <TextDiv onClick={() => {
-                  this.props.search(value);
-                  this.props.addHistory(value);
-                  this.props.setTopCard('listDisplay', false);
-                }}>{value}</TextDiv>
+                <TextDiv>{value}</TextDiv>
                 <ImgDiv img={getImgSrc(value)} />
               </CellDiv >
               : <GridDiv
@@ -166,6 +164,8 @@ class List extends PureComponent {
                   this.props.search(value);
                   this.props.addHistory(value);
                   this.props.setTopCard('listDisplay', false);
+                  this.props.handleInput(value);
+                  this.props.setTopCard('textboxState', 'OPEN');
                 }}>
                 <ImgContainer img={getImgSrc(value)} />
                   <TextDiv>{value}</TextDiv>
@@ -192,6 +192,7 @@ const mapDispatchToProps = dispatch => {
     search: text => dispatch(search(text)),
     addHistory: text => dispatch(addHistory(text)),
     setTopCard: (element, state) => dispatch(setTopCard(element, state)),
+    handleInput: text => dispatch(handleInput(text))
   }
 }
 export default connect(mapStatetoProps, mapDispatchToProps)(List);

@@ -4,7 +4,7 @@ import crossIcon from '../image/cross_white.png';
 import menuIcon from '../image/menu_white.png';
 import { Link } from 'react-router-dom'
 
-const ImgMinSize = '26px';
+const ImgMinSize = '23px';
 const ImgMaxSize = '30px';
 
 export const StyledLink = styled(Link)`
@@ -55,27 +55,17 @@ export const MenuImg = styled.img`
   }
 `;
 
-const SearchInit = keyframes`
-  to{
-    height:${ImgMinSize};
-    top:40%;
-    transform: translateY(-40%);
-  }
-`;
 export const SearchImg = styled.img`
   -webkit-tap-highlight-color: transparent;
-  content:url(${searchIcon});
-  height:${ImgMaxSize};
+  content:url(${props => props.textboxState === 'OPEN' ?crossIcon: searchIcon});
+  height:${props => props.textboxState === 'OPEN' ?ImgMinSize:ImgMaxSize};
   position: absolute;
   right:25px;
   top:50%;
-  transform: translateY(-50%);
+  transition:0.5s;
+  transform: ${props => props.textboxState === 'OPEN' ?'translateY(-70%)': 'translateY(-50%)'};
   cursor: pointer; 
   z-index:12;
-  animation-name:
-  ${props => props.textboxState === 'OPEN' && SearchInit};
-  animation-duration:0.5s;
-  animation-fill-mode:both;
 `;
 export const CrossImg = styled.img`
   -webkit-tap-highlight-color: transparent;
@@ -89,16 +79,6 @@ export const CrossImg = styled.img`
   z-index:12;
 `;
 
-const InputOpen = keyframes`
-  0%{
-  width:25px;
-  visibility:visible;
-    }
-  100%{
-  width:115px;
-  visibility:visible;
-  }
-`;
 export const TextInput = styled.input`
   outline:none;
   background:#013B63;
@@ -110,31 +90,17 @@ export const TextInput = styled.input`
   padding:0;
   padding-left:10px;
   height:25px;
-  width:25px;
   position: absolute;
   right:25px;
   top:57%;
-  -ms-transform: translateY(-57%);
-  transform: translateY(-57%);
-  visibility: hidden;
-  animation: 
-    ${props => props.switch === "OPEN" && InputOpen} 
-     0.7s 1 both 0.3s;
+
+  transition: 0.5s;
+  max-width:${props => props.switch === "OPEN" ? '115px': '40px'};
+  transform: ${props => props.switch === "OPEN" ? 'translateY(-57%)': 'translateY(-20%)'};
+  opacity: ${props => props.switch === "OPEN" ? '1': '0'};
+  visibility: ${props => props.switch === "OPEN" ?'visible': 'hidden'};
 `;
 
-
-const zoomOut = keyframes`
-  from{
-    height:80px;
-    line-height:80px;
-    font-size:27px;
-    }
-  to{
-    height:55px;
-    line-height:55px;
-    font-size:23px;
-  }
-`;
 export const TopCardDiv = styled.div`
   background:#013B63;
   position:fixed;
@@ -142,14 +108,11 @@ export const TopCardDiv = styled.div`
   left:0;
   width:100vw;
   margin:0;
-  font-size:${props => props.topCardState === 'DOWN' ? '23px' : '27px'} ;
-  line-height:${props => props.topCardState === 'DOWN' ? '55px' : '80px'} ;
-  height:${props => props.topCardState === 'DOWN' ? '55px' : '80px'} ;
+  transition:0.7s;
+  font-size:${props => !props.expand  ? '23px' : '27px'} ;
+  line-height:${props => !props.expand  ? '55px' : '80px'} ;
+  height:${props => !props.expand  ? '55px' : '80px'} ;
   z-index:10;
-  animation-name:${props => (props.topCardState === 'MIN' || props.topCardState === 'MAX') && zoomOut} ;
-  animation-duration:0.7s;
-  animation-direction:${props => props.topCardState === 'MIN' ? 'normal' : 'reverse'} ;
-  animation-fill-mode:both;
   
   @media (min-width: 500px) {
     left:250px;

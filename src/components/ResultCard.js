@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components';
 import { connect } from 'react-redux';
-import { updateScrollTop, search, addHistory } from '../actions';
+import { updateScrollTop, search, addHistory, setTopCard, handleInput } from '../actions';
 import { Grid } from 'react-virtualized';
 
 const ResultCardDiv = styled.div`
@@ -113,8 +113,11 @@ class ResultCard extends PureComponent {
                     onClick={(e) => {
                         if (e.detail === 3) {
                             if (columnIndex === 1) {
-                                this.props.search(this.props.searchResult[rowIndex - 1][columnIndex])
-                                this.props.addHistory(this.props.searchResult[rowIndex - 1][columnIndex])
+                                let title = this.props.searchResult[rowIndex - 1][columnIndex]
+                                this.props.search(title)
+                                this.props.addHistory(title)
+                                this.props.handleInput(title);
+                                this.props.setTopCard('textboxState', 'OPEN');
                             }
                             if (columnIndex === 0) {
                                 let check = window.confirm(`連結至Youtube搜尋 "${content}" `);
@@ -166,6 +169,8 @@ const mapDispatchToProps = dispatch => {
         updateScrollTop: scrollTop => dispatch(updateScrollTop(scrollTop)),
         search: text => dispatch(search(text)),
         addHistory: text => dispatch(addHistory(text)),
+        setTopCard: (element, state) => dispatch(setTopCard(element, state)),
+        handleInput: text => dispatch(handleInput(text))
     }
 }
 export default connect(mapStatetoProps, mapDispatchToProps)(ResultCard);
