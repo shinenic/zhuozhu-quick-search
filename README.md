@@ -1,6 +1,7 @@
 # 卓著資料快速搜尋網頁
 
-主要針對手機端設計的快速搜尋卓著所有歌曲相關資訊網站應用程式
+主要針對手機使用者設計
+能快速搜尋卓著所有歌曲相關資訊的網站應用程式
 
 [Demo](https://shinenic.github.io/zhuozhe-quick-search/)
 
@@ -31,6 +32,7 @@
 * Redux
 * MiddleWare
 * React-Router
+* Styled-Component
 
 
 
