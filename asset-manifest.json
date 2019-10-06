@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/zhuozhe-quick-search/static/css/main.6c1d83de.chunk.css",
-    "main.js": "/zhuozhe-quick-search/static/js/main.12adba5f.chunk.js",
-    "main.js.map": "/zhuozhe-quick-search/static/js/main.12adba5f.chunk.js.map",
+    "main.js": "/zhuozhe-quick-search/static/js/main.35351012.chunk.js",
+    "main.js.map": "/zhuozhe-quick-search/static/js/main.35351012.chunk.js.map",
     "runtime-main.js": "/zhuozhe-quick-search/static/js/runtime-main.9cd7e9b1.js",
     "runtime-main.js.map": "/zhuozhe-quick-search/static/js/runtime-main.9cd7e9b1.js.map",
     "static/js/2.8f760dca.chunk.js": "/zhuozhe-quick-search/static/js/2.8f760dca.chunk.js",
     "static/js/2.8f760dca.chunk.js.map": "/zhuozhe-quick-search/static/js/2.8f760dca.chunk.js.map",
     "index.html": "/zhuozhe-quick-search/index.html",
-    "precache-manifest.df0fdf7d6f004327acbb57051a31b0d7.js": "/zhuozhe-quick-search/precache-manifest.df0fdf7d6f004327acbb57051a31b0d7.js",
+    "precache-manifest.668380bb2ed50ff8367c8bb0ccbcf78c.js": "/zhuozhe-quick-search/precache-manifest.668380bb2ed50ff8367c8bb0ccbcf78c.js",
     "service-worker.js": "/zhuozhe-quick-search/service-worker.js",
     "static/css/main.6c1d83de.chunk.css.map": "/zhuozhe-quick-search/static/css/main.6c1d83de.chunk.css.map",
     "static/media/Pusheen1.png": "/zhuozhe-quick-search/static/media/Pusheen1.1f9a08df.png",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.9cd7e9b1.js",
     "static/js/2.8f760dca.chunk.js",
     "static/css/main.6c1d83de.chunk.css",
-    "static/js/main.12adba5f.chunk.js"
+    "static/js/main.35351012.chunk.js"
   ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zhuozhe-quick-search/precache-manifest.df0fdf7d6f004327acbb57051a31b0d7.js"
+  "/zhuozhe-quick-search/precache-manifest.668380bb2ed50ff8367c8bb0ccbcf78c.js"
 );
 
 self.addEventListener('message', (event) => {
