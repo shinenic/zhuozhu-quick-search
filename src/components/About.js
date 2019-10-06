@@ -20,13 +20,11 @@ const AboutDiv = styled.div`
 const ImgDiv = styled.div`
   float:left;
   margin-left:6vw;
-  /* height:30vw;
-  width:30vw; */
   width:30%;
   &:before {
     content: "";
 	  float: left;
-	  padding-top: 100%; 	/* initial ratio of 1:1*/
+	  padding-top: 100%; 
   }
   @media (min-width: 500px) {
     width:14%;

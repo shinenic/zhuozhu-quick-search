@@ -14,11 +14,7 @@ import { connect } from 'react-redux';
 import { setTopCard, updateWindowSize } from '../actions';
 import { Route } from 'react-router-dom'
 
-const MainDiv = styled.div`
-  @media (min-width: 500px) {
-    /* display:none; */
-  }
-`;
+const MainDiv = styled.div``;
 
 const masking = keyframes`
   from{
@@ -51,42 +47,44 @@ class Index extends PureComponent {
   render() {
     return (
       <MainDiv>
-        <Route exact path="/"
-          render={() => {
-            return (
-              <List />
-            );
-          }} />
-        <Route exact path="/search"
-          render={() => {
-            return (
-              <ResultCard />
-            );
-          }} />
-        <Route exact path="/list"
-          render={() => {
-            return (
-              <List />
-            );
-          }} />
-        <Route exact path="/history"
-          render={() => {
-            return (
-              <History />
-            );
-          }} />
-        <Route exact path="/about"
-          render={() => {
-            return (
-              <About />
-            );
-          }} />
-        <Route exact path="/download"
-          render={() => {
-            return (
-              <Download />
-            );
-          }} />
+        <div>
+          <Route exact path="/"
+            render={() => {
+              return (
+                <List />
+              );
+            }} />
+          <Route exact path="/search"
+            render={() => {
+              return (
+                <ResultCard />
+              );
+            }} />
+          <Route exact path="/list"
+            render={() => {
+              return (
+                <List />
+              );
+            }} />
+          <Route exact path="/history"
+            render={() => {
+              return (
+                <History />
+              );
+            }} />
+          <Route exact path="/about"
+            render={() => {
+              return (
+                <About />
+              );
+            }} />
+          <Route exact path="/download"
+            render={() => {
+              return (
+                <Download />
+              );
+            }} />
+        </div>
         <TopCard />
         <Menu />
         {this.props.isFetchingNewest && <Loading />}

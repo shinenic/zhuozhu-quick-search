@@ -61,7 +61,6 @@ const Option = styled.div`
   color:${props => props.active ? 'white' : '#999'};
 `;
 const OptionBox = styled.div`
-  /* border:2px solid #013B63; */
   position:absolute;
   left:50%;
   top:100px;

@@ -37,6 +37,12 @@ const ImgContainer = styled.div`
   background-image: url(${props=>props.img});
   background-size: cover;  
   filter: grayscale(1);
+  transition: 0.5s;
+  @media (min-width: 500px) {
+    &:hover{
+      filter: grayscale(0.3);
+    }
+  }
 `;
 
 // for mobile
@@ -65,8 +71,6 @@ const ImgMask = styled.div`
   position:absolute;
   top:0;
   left:0;
-  /* background:#000; */
-  /* opacity:1; */
   box-sizing:border-box;
   width:100%;
   height:100%;

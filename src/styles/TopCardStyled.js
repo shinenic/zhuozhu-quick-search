@@ -75,7 +75,6 @@ export const SearchImg = styled.img`
   animation-name:
   ${props => props.textboxState === 'OPEN' && SearchInit};
   animation-duration:0.5s;
-  /* animation-direction:${props => props.text === '' ? 'normal' : 'reverse'} ; */
   animation-fill-mode:both;
 `;
 export const CrossImg = styled.img`

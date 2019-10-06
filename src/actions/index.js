@@ -98,20 +98,16 @@ export const recvFetchDataResult = data => {
 export const fetchDataFromServer = () => {
     // 回傳函式，使redux-thunk middleware可以處理
     return (dispatch, getState) => {
-        // 1-1 通知使用者應用程式正在擷取後端資料，呈現載入中狀態
-        // 這邊直接呼叫寫好的同步action creator建立action
-        // 非同步Action從這邊開始逐一拆解成同步Action
-        dispatch(beginFetchData());
+        // 通知使用者應用程式正在擷取後端資料，呈現載入中狀態
+        // 直接呼叫寫好的同步action creator建立action
+        // 非同步Action開始逐一拆解成同步Action
+        dispatch(beginFetchData());  
 
-        // 1-2 驗證參數        
-
-        // 1-3 組裝呼叫後端資料API所需參數呼叫，fetch函式抓取後端資料
         const API_URL = 'https://sheltered-brushlands-78140.herokuapp.com/list';
 
         fetch(API_URL, { mode: 'cors' })
-            // 2. 收到後端資料API結果
+            // 收到後端資料API結果
             .then(response => {
-                // console.log('response', response.status);
                 if (response.ok !== true) {
                     switch (response.status) {
                         case 401:
@@ -132,7 +128,6 @@ export const fetchDataFromServer = () => {
             })
             .catch(error => {
                 console.log('error', error);
-                // 2-1 網路問題無法呼叫，通知使用者，並取消載入狀態
                 dispatch(finishFetchData("Failed to fetch"));
             });
     };

@@ -68,11 +68,9 @@ class ResultCard extends PureComponent {
     }
     _cellRenderer({ columnIndex, key, rowIndex, style }) {
         let content = rowIndex === 0 ? '___' : this.props.searchResult[rowIndex - 1][columnIndex]
-        // let content = this.props.searchResult[rowIndex][columnIndex]
 
         let customStyle = Object.assign({}, style, {
             color: '#ADE7FF',
-            // color: '#9DD7FF',
             display: 'table',
             fontSize: 17,
         });
