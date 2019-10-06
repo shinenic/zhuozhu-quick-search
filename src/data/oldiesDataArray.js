@@ -3,7 +3,7 @@ const dataArray = [["三年", "", "30"], ["小丑", "", "2"], ["友情", "", "20
 let formatResult = []
 
 dataArray.map((value, index) => {
-  formatResult.push([value[0], "(老歌集)", value[2]])
+  return formatResult.push([value[0], "(老歌集)", value[2]])
 })
 
 export default formatResult;

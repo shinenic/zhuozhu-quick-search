@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import { connect } from 'react-redux';
 import { search, addHistory, setTopCard } from '../actions';
 import { Redirect } from 'react-router-dom';
-import PIC from '../image/artist/周杰倫.jpg';
 
 const getImgSrc = name => {
   return require(`../image/artist/${name}.jpg`);
@@ -34,14 +33,18 @@ const ImgContainer = styled.div`
   left:50%;
   transform: translateY(-50%) translateX(-50%);
   
-  background-image: url(${props=>props.img});
+  background-image: url(${props => props.img});
   background-size: cover;  
   filter: grayscale(1);
   transition: 0.5s;
-  @media (min-width: 500px) {
-    &:hover{
+
+  &:hover{
       filter: grayscale(0.3);
-    }
+  }
+
+  @media (max-width: 500px) {
+    width:100%;
+    height:100%;  
   }
 `;
 
@@ -65,6 +68,14 @@ const showImg = keyframes`
   background:#013B63;
   opacity:0.33;
   }
+`;
+const ImgDiv = styled.div`
+  width:100%;
+  height:100%;  
+  background-image: url(${props => props.img});
+  background-size: cover;  
+  filter: grayscale(1);
+  transition: 0.5s;
 `;
 
 const ImgMask = styled.div`
@@ -91,20 +102,14 @@ const TextDiv = styled.div`
   left:0;
   width:100%;
   height:40px;
-
   background-color:rgb(0,0,0,0.4);
-
   text-align:center;
   font-size:20px;
   line-height:40px;
   z-index:6;
-`;
-const Img = styled.img`
-  height:auto;
-  width:auto;
-  max-height: 100%;  
-  max-width: 100%; 
-  filter:grayscale(1);
+  @media (min-width: 500px) {
+    bottom: 20%;
+  }
 `;
 const ListDiv = styled.div`
   box-sizing:border-box;
@@ -128,7 +133,8 @@ const ListDiv = styled.div`
   }
   @media (min-width: 500px) {
     left:250px;
-    width:calc(100vw - 250px);
+    width:calc(100vw - 260px);
+    /* width:calc(100vw - 250px); */
   }
 `;
 
@@ -154,19 +160,16 @@ class List extends PureComponent {
                   this.props.addHistory(value);
                   this.props.setTopCard('listDisplay', false);
                 }}>{value}</TextDiv>
-                <div>
-                  <Img src={getImgSrc(value)} alt={value} />
-                </div>
-              </CellDiv>
+                <ImgDiv img={getImgSrc(value)} />
+              </CellDiv >
               : <GridDiv
                 key={index} onClick={() => {
                   this.props.search(value);
                   this.props.addHistory(value);
                   this.props.setTopCard('listDisplay', false);
                 }}>
-                <ImgContainer img={getImgSrc(value)}>
+                <ImgContainer img={getImgSrc(value)} />
                   <TextDiv>{value}</TextDiv>
-                </ImgContainer>
               </GridDiv>
           )
         })
