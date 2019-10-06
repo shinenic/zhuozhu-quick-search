@@ -8,13 +8,13 @@ const AboutDiv = styled.div`
   left:0;
   top:0;
   padding-top:40px;
-  width:99vw;
+  width:100vw;
   overflow:hidden;
   white-space: pre-line;
   box-sizing: border-box;
   @media (min-width: 500px) {
     left:250px;
-    width:calc(100vw - 260px);
+    width:calc(100vw - 250px);
   }
 `;
 // const AotherGrid = styled.div`
