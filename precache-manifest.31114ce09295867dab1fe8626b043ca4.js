@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da3c4e200fd41a767bd2862890dbc801",
+    "revision": "cfd02253fbce51f97288199754557835",
     "url": "/zhuozhe-quick-search/index.html"
   },
   {
-    "revision": "805fd26d31be048ad905",
+    "revision": "6140056431e07ef1b3f3",
     "url": "/zhuozhe-quick-search/static/css/main.6c1d83de.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zhuozhe-quick-search/static/js/2.8f760dca.chunk.js"
   },
   {
-    "revision": "805fd26d31be048ad905",
-    "url": "/zhuozhe-quick-search/static/js/main.35351012.chunk.js"
+    "revision": "6140056431e07ef1b3f3",
+    "url": "/zhuozhe-quick-search/static/js/main.7369bfd8.chunk.js"
   },
   {
     "revision": "544c2d9868174dba5e48",
