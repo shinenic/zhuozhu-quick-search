@@ -7,11 +7,7 @@ class TopCard extends Component {
   switchIcon() {
     if (this.props.textboxState === "CLOSE") {
       this.props.setTopCard('textboxState', 'OPEN');
-      // this.props.setTopCard('searchIconState', 'SEARCH');
     }
-    // else if (this.props.searchIconState === "CLOSE") {
-    //   this.props.setTopCard('searchIconState', 'SEARCH');
-    // }
     this.props.handleInput('');
     setTimeout(() => this.inputRef.focus(), 500);
   }

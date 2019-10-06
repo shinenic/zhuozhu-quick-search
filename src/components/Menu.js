@@ -15,8 +15,8 @@ const MenuDiv = styled.div`
   width:45vw;
   position:fixed;
   top:0;
-  transition:0.7s;
   left:${props => props.menuState === 'OPEN' ? '0' : '-45vw'};
+  transition:left 0.7s;
   background:#154970;
   opacity:1;
   z-index:12;

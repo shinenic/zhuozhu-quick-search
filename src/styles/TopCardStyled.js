@@ -108,7 +108,7 @@ export const TopCardDiv = styled.div`
   left:0;
   width:100vw;
   margin:0;
-  transition:0.7s;
+  transition:font-size line-height height 0.7s;
   font-size:${props => !props.expand  ? '23px' : '27px'} ;
   line-height:${props => !props.expand  ? '55px' : '80px'} ;
   height:${props => !props.expand  ? '55px' : '80px'} ;

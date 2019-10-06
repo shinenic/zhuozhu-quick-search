@@ -13,6 +13,7 @@ const ResultCardDiv = styled.div`
   overflow:hidden;
   white-space: pre-line;
   @media (min-width: 500px) {
+    width:calc(100vw - 260px);
     left:250px;
   }
 `;
@@ -29,9 +30,29 @@ const showText = keyframes`
   margin-top:0;
   }
 `;
+const showHit = keyframes`
+  0%{
+  opacity:0;
+  margin-top:180px;
+    }
+  100%{
+  opacity:1;
+  margin-top:200px;
+  }
+`;
 const CellDiv = styled.div`
     animation: ${showText} 0.5s 1 both;
     /*搜尋時的小動畫*/
+`;
+const NoDataDiv = styled.div`
+    color: white;
+    width:300px;
+    text-align:center;
+    height:50px;
+    font-size:18px
+    line-height:50px;
+    margin:180px auto;
+    animation: ${showHit} 0.5s 1 both;
 `;
 
 
@@ -45,14 +66,16 @@ class ResultCard extends PureComponent {
     }
     render() {
         const list = this.props.searchResult;
+        let text = this.props.text===""?'請輸入歌名、歌手、冊數、頁碼搜尋':'搜尋不到相關結果';
         return (
             <ResultCardDiv>
+                {list.length === 0 && <NoDataDiv>{text}</NoDataDiv>}
                 <Grid
                     cellRenderer={this._cellRenderer}
                     columnCount={list.length !== 0 ? list[0].length : 0}
                     columnWidth={this._getColumnWidth}
                     height={this.props.windowHeight}
-                    width={this.props.windowWidth<500?this.props.windowWidth:this.props.windowWidth-250}
+                    width={this.props.windowWidth < 500 ? this.props.windowWidth : this.props.windowWidth - 250}
                     rowCount={list.length + 1}
                     rowHeight={this._getRowHeight}
                     style={gridStyle}
@@ -108,7 +131,7 @@ class ResultCard extends PureComponent {
                 break;
         }
         return (
-            <CellDiv key={key} style={customStyle} delayTime={rowIndex*0.1}>
+            <CellDiv key={key} style={customStyle} delayTime={rowIndex * 0.1}>
                 <div style={innerDivStyle}
                     onClick={(e) => {
                         if (e.detail === 3) {
@@ -141,7 +164,7 @@ class ResultCard extends PureComponent {
         }
     }
     _getColumnWidth({ index }) {
-        const width = this.props.windowWidth<500?this.props.windowWidth:this.props.windowWidth-250;
+        const width = this.props.windowWidth < 500 ? this.props.windowWidth : this.props.windowWidth - 250;
         switch (index) {
             case 0:
                 return width * 0.49;
@@ -162,6 +185,7 @@ const mapStatetoProps = state => {
         windowHeight: state.windowHeight,
         windowWidth: state.windowWidth,
         onScroll: state.onScroll,
+        text: state.text
     }
 }
 const mapDispatchToProps = dispatch => {
