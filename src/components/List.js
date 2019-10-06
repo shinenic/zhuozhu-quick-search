@@ -75,7 +75,6 @@ const ImgDiv = styled.div`
   background-image: url(${props => props.img});
   background-size: cover;  
   filter: grayscale(1);
-  transition: 0.5s;
 `;
 
 const ImgMask = styled.div`

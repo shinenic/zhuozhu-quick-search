@@ -9,6 +9,8 @@ import Pusheen2 from '../image/Pusheen2.png';
 import Pusheen3 from '../image/Pusheen3.png';
 
 const MenuDiv = styled.div`
+  overflow: hidden;
+  box-sizing: border-box;
   height:${props => props.height + 'px'};
   width:45vw;
   position:fixed;
