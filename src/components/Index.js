@@ -4,6 +4,7 @@ import TopCard from './TopCard';
 import Menu from './Menu';
 import ResultCard from './ResultCard';
 import Download from './Download';
+import ListGrid from './ListGrid';
 import List from './List';
 import History from './History';
 import About from './About';
@@ -51,7 +52,7 @@ class Index extends PureComponent {
           <Route exact path="/"
             render={() => {
               return (
-                <List />
+                <ListGrid />
               );
             }} />
           <Route exact path="/search"
@@ -86,7 +87,7 @@ class Index extends PureComponent {
             }} />
         </div>
         <TopCard />
-        <Menu />
+        {/* <Menu /> */}
         {this.props.isFetchingNewest && <Loading />}
         {this.props.menuState === 'OPEN' &&
           <Mask menu={this.props.menuState} onClick={() => this.props.setTopCard('menuState', 'CLOSE')} />}
