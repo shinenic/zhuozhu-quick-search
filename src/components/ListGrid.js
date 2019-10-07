@@ -14,46 +14,93 @@ const getRandomArbitrary = (min, max) => {
 const gridLayout = (mode) => {
   let areas = ""
   let row = 0
+  let column = 0
   if (mode === 'MOBILE') {
+    column = 3
     row = 20
     for (let cycle = 0; cycle <= 27; cycle += 9) {
       areas += `'s${cycle + 0} s${cycle + 1} s${cycle + 2}''s${cycle + 3} s${cycle + 3} s${cycle + 4}''s${cycle + 3} s${cycle + 3} s${cycle + 5}''s${cycle + 6} s${cycle + 7} s${cycle + 7}''s${cycle + 8} s${cycle + 7} s${cycle + 7}'`
     }
-  } else if (mode === 'DESKTOP') {
-    row = 8
+  }
+  if (mode === 'DESKTOP') {
+    // column = 6
+    // row = 8
+    // for (let cycle = 0; cycle <= 18; cycle += 18) {
+    //   areas += `'s${cycle + 0} s${cycle + 0} s${cycle + 1} s${cycle + 2} s${cycle + 3} s${cycle + 4}'
+    //   's${cycle + 0} s${cycle + 0} s${cycle + 5} s${cycle + 6} s${cycle + 6} s${cycle + 7}'
+    //   's${cycle + 8} s${cycle + 9} s${cycle + 10} s${cycle + 6} s${cycle + 6} s${cycle + 11}'
+    //   's${cycle + 12} s${cycle + 13} s${cycle + 14} s${cycle + 15} s${cycle + 16} s${cycle + 17}'`
+    // }
+    column = 6
+    row = 10
     for (let cycle = 0; cycle <= 18; cycle += 18) {
-      areas += `'s${cycle + 0} s${cycle + 0} s${cycle + 1} s${cycle + 2} s${cycle + 3} s${cycle + 4}'
-      's${cycle + 0} s${cycle + 0} s${cycle + 5} s${cycle + 6} s${cycle + 6} s${cycle + 7}'
-      's${cycle + 8} s${cycle + 9} s${cycle + 10} s${cycle + 6} s${cycle + 6} s${cycle + 11}'
-      's${cycle + 12} s${cycle + 13} s${cycle + 14} s${cycle + 15} s${cycle + 16} s${cycle + 17}'`
+      areas += `'s${cycle + 0} s${cycle + 1} s${cycle + 2} s${cycle + 3} s${cycle + 4} s${cycle + 4}'
+      's${cycle + 5} s${cycle + 6} s${cycle + 6} s${cycle + 7} s${cycle + 4} s${cycle + 4}'
+      's${cycle + 8} s${cycle + 6} s${cycle + 6} s${cycle + 9} s${cycle + 9} s${cycle + 10}'
+      's${cycle + 11} s${cycle + 11} s${cycle + 12} s${cycle + 9} s${cycle + 9} s${cycle + 13}'
+      's${cycle + 11} s${cycle + 11} s${cycle + 14} s${cycle + 15} s${cycle + 16} s${cycle + 17}'`
     }
   }
-  return {areas,row};
+  return {areas, row, column};
 }
 
-const artistArr = ['蔡依林', '莫文蔚', '王力宏', '張學友', '張信哲', '林憶蓮'
-  , '五月天', '張惠妹', '辛曉琪', '周杰倫', '林志炫', '林俊傑', '江蕙', '梁靜茹'
-  , '許美靜', '許茹芸', '陳昇', '王菲', '蔡依林', '莫文蔚', '王力宏', '張學友', '張信哲', '林憶蓮'
-  , '五月天', '張惠妹', '辛曉琪', '周杰倫', '林志炫', '林俊傑', '江蕙', '梁靜茹'
+const artistArr = ['蔡依林', '莫文蔚', '王力宏', '張信哲', '張學友', '林憶蓮'
+  , '五月天', '林俊傑', '辛曉琪', '周杰倫', '林志炫', '張惠妹', '江蕙', '梁靜茹'
+  , '許美靜', '許茹芸', '陳昇', '王菲', '蔡依林', '莫文蔚', '王力宏', '張信哲', '張學友', '林憶蓮'
+  , '五月天', '林俊傑', '辛曉琪', '周杰倫', '林志炫', '張惠妹', '江蕙', '梁靜茹'
   , '許美靜', '許茹芸', '陳昇', '王菲']
 
 const ListDiv = styled.div`
-  margin-top:200px;
-  /* padding:6px; */
+  margin-top:80px;
+  padding:6px;
   box-sizing:border-box;
   width:100vw;
   display:grid;
 
-  grid-template-columns:repeat(3, calc(33.33vw - 8px));
+  grid-template-columns:repeat(${gridLayout('MOBILE').column}, calc(33.33vw - 8px));
   grid-template-rows:repeat(${gridLayout('MOBILE').row}, calc(33.33vw - 8px));
-  /* grid-gap:6px; */
+  grid-gap:6px;
   grid-template-areas:${gridLayout('MOBILE').areas};
 
   @media (min-width: 500px) {
-    grid-template-columns:repeat(3, calc(16.66vw));
-    grid-template-rows:repeat(${gridLayout('DESKTOP').row}, calc(16.66vw));
+    margin-left:250px;
+    margin-right:10px;
+    width:calc(100vw - 250px);
+    grid-template-columns:repeat(${gridLayout('MOBILE').column}, calc(16.66vw - 48.667px));
+    grid-template-rows:repeat(${gridLayout('DESKTOP').row}, calc(16.66vw - 48.667px));
     grid-template-areas:${gridLayout('DESKTOP').areas};
   }
+`;
+const Img = styled.img`
+  content:url(${props => props.imgSrc});
+  max-width:100%;
+  max-height:100%;
+  transition:0.5s;
+  filter: grayscale(1);
+`;
+const showImg = keyframes`
+  0%{
+  background:#000;
+  opacity:1;
+    }
+  100%{
+  background:#013B63;
+  opacity:0.33;
+  }
+`;
+const ImgMask = styled.div`
+  position:absolute;
+  top:0;
+  left:0;
+  box-sizing:border-box;
+  width:100%;
+  height:100%;
+  z-index:5;
+  cursor: pointer;
+  background:#013B63;
+  opacity:0.33;
+  transition:0.5s;
+  animation: ${showImg} 1s 1 both ${props => props.random}s;
 `;
 const CellDiv = styled.div`
   grid-area:${props => 's' + props.index};
@@ -61,25 +108,29 @@ const CellDiv = styled.div`
   box-sizing:border-box;
   width:100%;
   height:100%;
+  position: relative;
+  &:hover ${Img}{
+    filter:grayscale(0);
+  };
+  &:hover ${ImgMask}{
+    opacity:0;
+    background:white;
+  };
 `;
-const ImgDiv = styled.div`
+const TextDiv = styled.div`
+  user-select: none;
+  position:absolute;
+  color:white;
+  bottom:20px;
+  left:0;
   width:100%;
-  height:100%;  
-  background-color: orange;
-  filter: grayscale(1);
-`;
-
-const Img = styled.img`
-  content:url(${props => props.imgSrc});
-  max-width:100%;
-  max-height:100%;
-`
-
-const DivTest = styled.div`
-  width:100%;
-  height:100%;  
-  box-sizing:border-box;
-  background-color:blue;
+  height:40px;
+  background-color:rgb(0,0,0,0.4);
+  text-align:center;
+  font-size:20px;
+  line-height:40px;
+  z-index:6;
+  cursor: pointer;
 `;
 
 class ListGrid extends PureComponent {
@@ -88,18 +139,24 @@ class ListGrid extends PureComponent {
       <ListDiv>
         {artistArr.map((value, index) => {
           return (<CellDiv
-            key={index} index={index}>
-            {/* <ImgMask random={getRandomArbitrary(0, 1.5)} />
-                <TextDiv>{value}</TextDiv> */}
-            {/* <ImgDiv img={getImgSrc(value)} /> */}
+            key={index} 
+            index={index} 
+            onClick={() => {
+              this.props.search(value);
+              this.props.addHistory(value);
+              this.props.setTopCard('listDisplay', false);
+              this.props.handleInput(value);
+              this.props.setTopCard('textboxState', 'OPEN');
+            }}>
+            <ImgMask random={getRandomArbitrary(0, 1.5)} />
+            <TextDiv>{value}</TextDiv>
             <Img imgSrc={getImgSrc(value)} />
-            {/* <DivTest/> */}
-            {/* {index} */}
           </CellDiv >
 
           )
         })
         }
+        {(this.props.text !== '' || this.props.listDisplay === false) && <Redirect to={'/search'} />}
       </ListDiv >
     )
   }
