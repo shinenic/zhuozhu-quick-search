@@ -4,7 +4,8 @@ import TopCard from './TopCard';
 import Menu from './Menu';
 import ResultCard from './ResultCard';
 import Download from './Download';
-import List from './List';
+import ListGrid from './ListGrid';
+// import List from './List';
 import History from './History';
 import About from './About';
 import Loading from './Loading';
@@ -51,7 +52,7 @@ class Index extends PureComponent {
           <Route exact path="/"
             render={() => {
               return (
-                <List />
+                <ListGrid />
               );
             }} />
           <Route exact path="/search"
@@ -63,7 +64,7 @@ class Index extends PureComponent {
           <Route exact path="/list"
             render={() => {
               return (
-                <List />
+                <ListGrid />
               );
             }} />
           <Route exact path="/history"

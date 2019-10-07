@@ -16,6 +16,15 @@ const changeLetter = keyframes`
     content: "Loading...";
   }
 `;
+const fadeIn = keyframes`
+  0% {
+    opacity:0;
+  }
+  
+  100% {
+    opacity:0.7;
+  }
+`;
 const Mask = styled.div`
   height:100vh;
   width:100vw;
@@ -23,8 +32,9 @@ const Mask = styled.div`
   top:0;
   left:0;
   background:black;
-  opacity:0.7;
+  opacity:0;
   z-index:13;
+  animation: ${fadeIn} 1s 1 both;
 `;
 const LoadingText = styled.div`
   display: flex;
