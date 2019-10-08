@@ -6,7 +6,7 @@
 [Demo](https://shinenic.github.io/zhuozhe-quick-search/)
 
 
-<img src="demo1.gif" alt="demo1" width="220"/> <img src="demo2.gif" alt="demo1" width="220"/>
+<img src="demo1.gif" alt="demo1" width="250"/> <img src="demo2.gif" alt="demo1" width="250"/>
 
 
 
