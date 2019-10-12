@@ -23,14 +23,6 @@ const gridLayout = (mode) => {
     }
   }
   if (mode === 'DESKTOP') {
-    // column = 6
-    // row = 8
-    // for (let cycle = 0; cycle <= 18; cycle += 18) {
-    //   areas += `'s${cycle + 0} s${cycle + 0} s${cycle + 1} s${cycle + 2} s${cycle + 3} s${cycle + 4}'
-    //   's${cycle + 0} s${cycle + 0} s${cycle + 5} s${cycle + 6} s${cycle + 6} s${cycle + 7}'
-    //   's${cycle + 8} s${cycle + 9} s${cycle + 10} s${cycle + 6} s${cycle + 6} s${cycle + 11}'
-    //   's${cycle + 12} s${cycle + 13} s${cycle + 14} s${cycle + 15} s${cycle + 16} s${cycle + 17}'`
-    // }
     column = 6
     row = 10
     for (let cycle = 0; cycle <= 18; cycle += 18) {

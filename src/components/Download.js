@@ -79,7 +79,7 @@ class Download extends PureComponent {
             <DivTop>資料新增失敗</DivTop>
             <DivError>錯誤資訊: "{this.props.error}"，請重新檢查網路連線狀況並重新點擊下載，若仍有問題請<a href="mailto: galadiya41@gmail.com">聯絡我</a></DivError>
           </div>
-          : <DivTop></DivTop>
+          : <DivTop/>
         }
       </DownloadDiv>
     )

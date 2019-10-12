@@ -11,7 +11,6 @@ const getRandomArbitrary = (min, max) => {
   return Math.random() * (max - min) + min;
 }
 
-// for desktop
 const GridDiv = styled.div`
   display: inline-block;
   width: 25%;

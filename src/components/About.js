@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-// import Pusheen from '../image/Pusheen3.png';
 
 const AboutDiv = styled.div`
   position:absolute;
@@ -17,52 +16,6 @@ const AboutDiv = styled.div`
     width:calc(100vw - 250px);
   }
 `;
-// const AotherGrid = styled.div`
-//   width:100vw;
-//   display:grid;
-//   grid-template-areas:"pic intro";
-//   grid-template-columns:0.4fr 0.6fr;
-//   @media (min-width: 500px) {
-//     grid-template-columns:0.3fr 0.7fr;
-//     width:calc(100vw - 260px);
-//   }
-// `;
-// const ImgDiv = styled.div`
-//   grid-area:pic;
-//   width:30vw;
-//   height:30vw;
-//   display: grid;
-//   margin-left: 5vw;
-//   justify-content: center;
-//   align-items: center;
-//   @media (min-width: 500px) {
-//     width:10vw;
-//     height:10vw;
-//     margin-top:40px;
-//   }
-// `;
-// const Img=styled.img`
-//   height:100%;
-//   width:100%;
-//   max-height: 100%;  
-//   max-width: 100%; 
-// `;
-// const IntroduceDiv = styled.div`
-//   display: grid;
-//   justify-content: center;
-//   align-items: center;
-//   grid-area:intro;
-//   box-sizing: border-box;
-//   line-height:7vw;
-//   font-size:15px;
-//   color: #9DD7FF;
-//   @media (min-width: 500px) {
-//     line-height:45px;
-//     margin-top:0;
-//     justify-content: start;
-//   }
-// `;
-
 const Title = styled.div`
   box-sizing:border-box;
   padding-left:2.5vw;
@@ -124,21 +77,6 @@ class About extends PureComponent {
   render() {
     return (
       <AboutDiv>
-        {/* <Title>關於作者：</Title>
-        <AotherGrid>
-          <ImgDiv>
-            <Img alt='Pusheen' src={Pusheen}/>
-          </ImgDiv>
-          <IntroduceDiv>
-            <div>
-              <span style={{ fontSize: '21px', color: 'white', fontWeight: 'bold' }}>
-                Kadenz Wei</span><br />
-              Piano arranger/performer <br />
-              Classic, Jazz, Pop music<br />
-              Live in Taiwan Taipei city
-             </div>
-          </IntroduceDiv>
-        </AotherGrid> */}
         <Title2>關於作者：</Title2>
         <InfoDiv>
           <SubTitle>Kadenz Wei<br /></SubTitle>

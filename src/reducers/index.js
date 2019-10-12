@@ -38,7 +38,7 @@ const clearAllBlank = str => {
   return str;
 }
 
-const zzsReducer = (state = initState, action) => {
+const rootReducer = (state = initState, action) => {
   switch (action.type) {
     case 'SET_TOPCARD':
       let obj = {};
@@ -178,4 +178,4 @@ const zzsReducer = (state = initState, action) => {
   }
 }
 
-export default zzsReducer;
+export default rootReducer;
