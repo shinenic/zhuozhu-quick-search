@@ -1,4 +1,4 @@
-# 卓著資料快速搜尋網頁   [Demo](https://shinenic.github.io/zhuozhe-quick-search/)
+# 卓著資料快速搜尋網頁   [Demo](https://shinenic.github.io/zhuozhu-quick-search/)
 
 主要針對手機使用者設計
 能快速搜尋卓著所有歌曲相關資訊的網站應用程式

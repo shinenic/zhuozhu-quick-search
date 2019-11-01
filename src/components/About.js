@@ -115,7 +115,7 @@ class About extends PureComponent {
           <Content>- 修正英文歌曲搜尋的bug<br /></Content>
           <Content>- 增強網頁載入速度<br /></Content>
         </InfoDiv>
-        <Bottom>&copy; Copyright {new Date().getFullYear()} Zhuo-Zhe-Search. All Rights Reserved</Bottom>
+        <Bottom>&copy; Copyright {new Date().getFullYear()} Zhuo-Zhu-Search. All Rights Reserved</Bottom>
       </AboutDiv>
     )
   }

@@ -1,8 +1,8 @@
 {
-  "name": "zhuozhe-quick-search",
+  "name": "zhuozhu-quick-search",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gitname.github.io/zhuozhe-quick-search",
+  "homepage": "http://gitname.github.io/zhuozhu-quick-search",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "match-sorter": "^4.0.2",
