@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/zhuozhu-quick-search/static/css/main.da66b7c4.chunk.css",
-    "main.js": "/zhuozhu-quick-search/static/js/main.32834af2.chunk.js",
-    "main.js.map": "/zhuozhu-quick-search/static/js/main.32834af2.chunk.js.map",
+    "main.js": "/zhuozhu-quick-search/static/js/main.25999664.chunk.js",
+    "main.js.map": "/zhuozhu-quick-search/static/js/main.25999664.chunk.js.map",
     "runtime-main.js": "/zhuozhu-quick-search/static/js/runtime-main.e3da4f70.js",
     "runtime-main.js.map": "/zhuozhu-quick-search/static/js/runtime-main.e3da4f70.js.map",
     "static/js/2.d560824d.chunk.js": "/zhuozhu-quick-search/static/js/2.d560824d.chunk.js",
     "static/js/2.d560824d.chunk.js.map": "/zhuozhu-quick-search/static/js/2.d560824d.chunk.js.map",
     "index.html": "/zhuozhu-quick-search/index.html",
-    "precache-manifest.4ac047b50e68a111a5b5c7c396ecf34d.js": "/zhuozhu-quick-search/precache-manifest.4ac047b50e68a111a5b5c7c396ecf34d.js",
+    "precache-manifest.8742851d906719ddf176b9e3b11beb11.js": "/zhuozhu-quick-search/precache-manifest.8742851d906719ddf176b9e3b11beb11.js",
     "service-worker.js": "/zhuozhu-quick-search/service-worker.js",
     "static/css/main.da66b7c4.chunk.css.map": "/zhuozhu-quick-search/static/css/main.da66b7c4.chunk.css.map",
     "static/media/Pusheen1.png": "/zhuozhu-quick-search/static/media/Pusheen1.1f9a08df.png",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.e3da4f70.js",
     "static/js/2.d560824d.chunk.js",
     "static/css/main.da66b7c4.chunk.css",
-    "static/js/main.32834af2.chunk.js"
+    "static/js/main.25999664.chunk.js"
   ]
 }
